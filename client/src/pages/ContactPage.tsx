@@ -4,11 +4,10 @@ import { FaTelegram, FaPaypal, FaBitcoin, FaCreditCard, FaCopy, FaArrowLeft } fr
 import { SiStripe } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { QRCodeSVG } from "qrcode.react";
-import { toast } from "sonner";
 
 export default function ContactPage() {
   const [_, navigate] = useLocation();
@@ -48,7 +47,6 @@ export default function ContactPage() {
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
-    toast.success("Copied to clipboard!");
     setTimeout(() => setCopied(false), 2000);
   };
 
