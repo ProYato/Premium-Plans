@@ -26,9 +26,9 @@ export default function Footer() {
               </a>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Privacy Policy</a>
-              <a href="#" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Terms of Service</a>
-              <a href="#" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Contact Us</a>
+              <a href="/legal/privacy" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Privacy Policy</a>
+              <a href="/legal/terms" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Terms of Service</a>
+              <a href="/contact" className="text-sm dark:text-gray-400 text-gray-600 hover:text-[#5f6df8]">Contact Us</a>
             </div>
           </div>
         </div>
