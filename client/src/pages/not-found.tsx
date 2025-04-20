@@ -1,16 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-router-dom"; // or your routing library
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-pink-50 bg-[radial-gradient(#ffcce6_1px,transparent_1px)] bg-[length:20px_20px]">
+    <div className="min-h-screen w-full flex items-center justify-center bg-pink-50 bg-[radial-gradient(#ffcce6_1px,transparent_1px)] bg-[size:20px_20px]">
       <Card className="w-full max-w-md mx-4 border-pink-200 shadow-lg overflow-hidden">
         <CardContent className="p-0">
           {/* Anime Image */}
           <div className="relative h-40 w-full bg-gradient-to-r from-pink-300 to-purple-300 flex justify-center">
-            <Image
+            <img
               src="https://i.postimg.cc/brsbNsrY/Kawaii-Anime-Girl-PNG-Images-HD.png"
               alt="Anime Girl"
               width={160}
@@ -35,7 +34,7 @@ export default function NotFound() {
             </p>
 
             <Link 
-              href="/" 
+              to="/" 
               className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-full text-sm font-medium transition-all shadow-md hover:shadow-lg"
             >
               <Home className="h-4 w-4" />
@@ -45,8 +44,8 @@ export default function NotFound() {
         </CardContent>
       </Card>
 
-      {/* Add floating animation to globals.css or use this style tag */}
-      <style jsx global>{`
+      {/* Add floating animation to your CSS file or use this style tag */}
+      <style>{`
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-15px); }
@@ -54,7 +53,7 @@ export default function NotFound() {
         }
         .dark .bg-pink-50 {
           background-color: #1a1a2e;
-          background-image: radial-gradient(#4a235a_1px, transparent_1px);
+          background-image: radial-gradient(#4a235a 1px, transparent 1px);
         }
         .dark .text-pink-800 {
           color: #e6e6e6;
